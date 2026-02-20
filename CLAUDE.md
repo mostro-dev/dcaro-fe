@@ -45,7 +45,7 @@ src/
 │   ├── layout/
 │   │   ├── Navbar.tsx
 │   │   ├── Footer.tsx
-│   │   └── RootLayout.tsx    # Wraps all pages with Navbar + Footer
+│   │   └── RootLayout.tsx    # Wraps all pages except landing with Navbar + Footer
 │   ├── ui/                   # Generic primitives (Button, Input, Tag, etc.)
 │   │   ├── Button.tsx
 │   │   ├── Input.tsx
@@ -96,7 +96,7 @@ src/
 ### Routing
 - Use React Router v6 with `createBrowserRouter`.
 - All routes are defined in `app/App.tsx`.
-- The `RootLayout` component wraps all routes so Navbar and Footer appear on every page.
+- The `RootLayout` component wraps all routes except landing so Navbar and Footer appear on every page.
 - Project detail uses a dynamic route: `/projects/:slug`
 
 ### TypeScript
