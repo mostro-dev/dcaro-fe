@@ -138,12 +138,21 @@ When translating a Figma design:
 
 ---
 
+## Package Manager
+**Always use `bun`.** Never use `npm` or `yarn`. The project uses `bun.lock` — running `npm install` creates a conflicting `package-lock.json`.
+
+```bash
+bun install              # Install dependencies
+bun add <package>        # Add a dependency
+bun add -d <package>     # Add a dev dependency
+```
+
 ## Commands
 ```bash
-npm run dev          # Start dev server
-npm run build        # Production build
-npm run storybook    # Start Storybook
-npm run type-check   # Run tsc --noEmit
+bun run dev          # Start dev server
+bun run build        # Production build
+bun run storybook    # Start Storybook
+bun run type-check   # Run tsc --noEmit
 ```
 
 ---
@@ -163,3 +172,7 @@ npm run type-check   # Run tsc --noEmit
 - Do not put page-specific components in `src/components/`
 - Do not add a backend, API routes, or database logic
 - Do not use default exports for components (only for pages)
+- Do not invent pages, sections, or components that don't exist in Figma
+- Do not add content, copy, or UI elements not present in the Figma design
+- Do not create pages beyond these 5: Landing, About, Projects, Project Detail, Contact
+- If something is unclear in Figma, STOP and ask — never assume or invent
