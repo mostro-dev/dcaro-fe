@@ -153,7 +153,30 @@ bun run dev          # Start dev server
 bun run build        # Production build
 bun run storybook    # Start Storybook
 bun run type-check   # Run tsc --noEmit
+bun run lint         # ESLint + import sort
+bun run format       # Prettier (auto-fix)
+bun run format:check # Prettier (check only, no writes)
 ```
+
+---
+
+## Code Evaluation
+
+After every implementation, run these three checks **in order** before considering the work done:
+
+```bash
+bun run type-check   # 1. TypeScript strict mode — no build, just types
+bun run lint         # 2. ESLint rules + import sort order
+bun run format:check # 3. Prettier formatting
+```
+
+### Rules
+
+- **All three must pass** before the implementation is considered complete.
+- **If any evaluation fails:** STOP immediately and ask the user what to do. Do not attempt to auto-fix and re-run more than once per failure. Present the error output and wait for instructions.
+- **Import sort:** imports must be sorted (enforced by `eslint-plugin-simple-import-sort`). Running `bunx eslint . --fix` auto-fixes sort violations.
+- **Prettier:** formatting must match `.prettierrc`. Running `bun run format` auto-fixes formatting.
+- **Never silence errors** with `// eslint-disable`, `@ts-ignore`, or `@ts-expect-error` to make evaluations pass.
 
 ---
 
