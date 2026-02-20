@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+
 import { NavbarItem } from './NavbarItem';
 
 const meta: Meta<typeof NavbarItem> = {

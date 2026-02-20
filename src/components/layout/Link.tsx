@@ -15,13 +15,7 @@ const VARIANT_CLASSES: Record<LinkVariant, string> = {
   visited: 'font-montserrat text-regular font-normal text-red opacity-75',
 };
 
-export function Link({
-  variant = 'normal',
-  children,
-  href,
-  className,
-  ...rest
-}: LinkProps) {
+export function Link({ variant = 'normal', children, href, className, ...rest }: LinkProps) {
   return (
     <a
       href={href}

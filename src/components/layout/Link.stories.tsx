@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+
 import { Link } from './Link';
 
 const meta: Meta<typeof Link> = {
@@ -56,10 +57,18 @@ export const Visited: Story = {
 export const AllVariants: Story = {
   render: () => (
     <div className="flex flex-col gap-3 items-start">
-      <Link href="#" variant="normal">Link — Normal</Link>
-      <Link href="#" variant="hover">Link — Hover</Link>
-      <Link href="#" variant="selected">Link — Selected</Link>
-      <Link href="#" variant="visited">Link — Visited</Link>
+      <Link href="#" variant="normal">
+        Link — Normal
+      </Link>
+      <Link href="#" variant="hover">
+        Link — Hover
+      </Link>
+      <Link href="#" variant="selected">
+        Link — Selected
+      </Link>
+      <Link href="#" variant="visited">
+        Link — Visited
+      </Link>
     </div>
   ),
 };
