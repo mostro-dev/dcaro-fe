@@ -120,7 +120,7 @@ src/
 
 ## Storybook
 - Every component in `src/components/` **must have a `.stories.tsx` file** next to it.
-- Every page-level component in `src/pages/` should also have a story.
+- **Do not create stories for page components** in `src/pages/` — stories are for shared/reusable components only.
 - Use **CSF3 format** (Component Story Format 3).
 - Story file naming: `ComponentName.stories.tsx`
 
@@ -134,7 +134,7 @@ When translating a Figma design:
 3. Download any image assets into `src/assets/images/`.
 4. Extract any color or typography values and add them to `tailwind.config.ts` before writing component code.
 5. Implement using Tailwind utility classes.
-6. After implementing a page, create Storybook stories for all new components.
+6. After implementing a page, create Storybook stories for any new shared components added to `src/components/`.
 
 ---
 
