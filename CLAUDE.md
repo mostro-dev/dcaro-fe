@@ -188,6 +188,21 @@ bun run format:check # 3. Prettier formatting
 
 ---
 
+## Deployment
+
+Deployments to GitHub Pages are **manual via GitHub Actions**.
+
+- **Workflow file:** `.github/workflows/deploy.yml`
+- **Trigger:** `workflow_dispatch` — go to GitHub → Actions → "Deploy to GitHub Pages" → Run workflow → select `main`
+- **Build output:** `dist/` (Vite)
+- **Custom domain:** `dcaro.co` — defined in `public/CNAME` (Vite copies this into `dist/` at build time)
+- **`vite.config.ts` `base`:** set to `'/'` (required for custom domain; do not change to a sub-path)
+- **Pages source:** must be set to "GitHub Actions" in GitHub Settings → Pages (not "Deploy from a branch")
+
+Do **not** commit `dist/` — it is gitignored and built by the workflow.
+
+---
+
 ## What NOT to do
 - Do not use `styled-components` or `emotion`
 - Do not create `.css` or `.scss` files per component
