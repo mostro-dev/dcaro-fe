@@ -1,3 +1,7 @@
 export default function ProjectsPage() {
-  return <div />;
+  return (
+    <div>
+      <h1>Projects page works!</h1>
+    </div>
+  );
 }
