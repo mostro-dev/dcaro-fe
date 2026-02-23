@@ -11,6 +11,9 @@ const meta: Meta<typeof Navbar> = {
       control: 'select',
       options: ['about', 'projects', 'contact', null],
     },
+    isLanding: {
+      control: 'boolean',
+    },
   },
 };
 
@@ -38,5 +41,12 @@ export const ProjectsActive: Story = {
 export const ContactActive: Story = {
   args: {
     activeItem: 'contact',
+  },
+};
+
+export const LandingRow: Story = {
+  args: {
+    activeItem: null,
+    isLanding: true,
   },
 };
