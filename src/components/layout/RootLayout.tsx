@@ -1,7 +1,7 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
 import { Footer } from './Footer';
-import { Logo } from './Logo';
+import { LogoTopBar } from './LogoTopBar';
 import { Navbar } from './Navbar';
 
 type NavbarActiveItem = 'about' | 'projects' | 'contact' | null;
@@ -21,7 +21,7 @@ export function RootLayout() {
       <div className="flex flex-1">
         <div className="flex flex-col flex-1">
           <Link to="/" className="px-5 pt-5 inline-block self-start" aria-label="Go to home">
-            <Logo />
+            <LogoTopBar />
           </Link>
           <main className="flex-1">
             <Outlet />
