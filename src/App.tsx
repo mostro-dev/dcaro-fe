@@ -1,27 +1,17 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import { RootLayout } from './components/layout/RootLayout';
 import AboutPage from './pages/about/AboutPage';
 import ContactPage from './pages/contact/ContactPage';
-import { LandingLayout } from './pages/landing/LandingLayout';
 import LandingPage from './pages/landing/LandingPage';
 import ProjectDetailPage from './pages/project-detail/ProjectDetailPage';
 import ProjectsPage from './pages/projects/ProjectsPage';
 
 const router = createBrowserRouter([
-  {
-    element: <LandingLayout />,
-    children: [{ path: '/', element: <LandingPage /> }],
-  },
-  {
-    element: <RootLayout />,
-    children: [
-      { path: '/about', element: <AboutPage /> },
-      { path: '/projects', element: <ProjectsPage /> },
-      { path: '/projects/:slug', element: <ProjectDetailPage /> },
-      { path: '/contact', element: <ContactPage /> },
-    ],
-  },
+  { path: '/', element: <LandingPage /> },
+  { path: '/about', element: <AboutPage /> },
+  { path: '/projects', element: <ProjectsPage /> },
+  { path: '/projects/:slug', element: <ProjectDetailPage /> },
+  { path: '/contact', element: <ContactPage /> },
 ]);
 
 export default function App() {
