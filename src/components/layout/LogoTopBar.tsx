@@ -15,7 +15,7 @@ export function LogoTopBar({ isLanding = false }: LogoTopBarProps) {
     >
       <div
         className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500 ${
-          isLanding ? 'opacity-100' : 'p-0 top-[25px] left-[25px]'
+          isLanding ? 'opacity-100' : 'p-0 top-[35px] left-[35px]'
         }`}
       >
         <Link to="/" className="inline-block self-start" aria-label="Go to home">
