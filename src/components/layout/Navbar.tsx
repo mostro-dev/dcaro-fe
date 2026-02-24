@@ -22,7 +22,7 @@ export function Navbar({ activeItem, isLanding = false }: NavbarProps) {
       aria-label="Main navigation"
     >
       <ul
-        className={`w-full transition-all flex flex-wrap justify-center gap-4 ease-in-out absolute right-0 ${isLanding ? 'duration-1000' : 'w-[100px] right-0 duration-500'}`}
+        className={`w-full transition-all flex flex-wrap justify-center gap-12 ease-in-out absolute right-0 ${isLanding ? 'duration-1000' : 'w-[100px] right-0 duration-500'}`}
       >
         {NAV_ITEMS.map(({ key, label, to }) => (
           <li
