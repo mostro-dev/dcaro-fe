@@ -18,10 +18,10 @@ export function RootShell() {
   const activeItem = deriveActiveItem(pathname);
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <LogoTopBar isLanding={isLanding} />
       <Navbar activeItem={activeItem} isLanding={isLanding} />
       <Outlet />
-    </>
+    </div>
   );
 }
