@@ -1,16 +1,13 @@
-interface FooterProps {
-  year?: number;
-}
-
-export function Footer({ year = 2026 }: FooterProps) {
+export function Footer() {
+  const year = 2026;
   return (
     <footer
-      className="mt-auto flex items-center justify-between w-full px-5 py-3 h-[15px]"
+      className="mt-auto flex items-center justify-between w-full px-5 py-5 h-[15px]"
       aria-label="Site footer"
     >
       <span className="font-jura text-small font-normal text-black whitespace-nowrap">{year}</span>
 
-      <span className="font-jura text-xsmall font-normal text-grey whitespace-nowrap">
+      <span className="font-jura text-small font-normal text-grey whitespace-nowrap">
         {`Built with \u2764\ufe0f by Freddy Orozco`}
       </span>
 
@@ -23,8 +20,8 @@ export function Footer({ year = 2026 }: FooterProps) {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="11"
-          height="11"
+          width="15"
+          height="15"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
